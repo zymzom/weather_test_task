@@ -1,4 +1,4 @@
-FROM python:3.10
+FROM python:3.8-slim
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
@@ -16,4 +16,4 @@ COPY arc-entrypoint.sh /app/
 ENTRYPOINT /app/entrypoint.sh
 ENTRYPOINT /app/arc-entrypoint.sh
 
-COPY app /app/
+COPY  . /app/
